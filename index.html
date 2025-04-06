@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animal Book for Children</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+    .book {
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+    }
+    .page {
+      flex: 0 0 100vw;
+      height: 100vh;
+      scroll-snap-align: start;
+      border: 10px solid #000;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+    }
+    .video-container {
+      flex: 1;
+      overflow: hidden;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .details {
+      flex: 1;
+      background: #fff;
+      overflow-y: auto;
+      padding: 20px;
+    }
+    .details h2 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+    .details p {
+      margin: 8px 0;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="book">
+    <div class="page">
+      <div class="video-container">
+        <video autoplay loop muted playsinline>
+          <source src="lion.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="details">
+        <h2>Lion</h2>
+        <p><strong>Type:</strong> Mammal</p>
+        <p><strong>Category:</strong> Carnivore</p>
+        <p><strong>Foods:</strong> Meat, Buffalo, Deer</p>
+        <p>The lion is known as the king of the jungle. It lives in groups called prides and is found mainly in Africa and a few parts of India.</p>
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="video-container">
+        <video autoplay loop muted playsinline>
+          <source src="tiger.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="details">
+        <h2>Tiger</h2>
+        <p><strong>Type:</strong> Mammal</p>
+        <p><strong>Category:</strong> Carnivore</p>
+        <p><strong>Foods:</strong> Deer, Wild Boar</p>
+        <p>The tiger is the national animal of India. It is known for its stripes and is an excellent swimmer. Tigers prefer forests with plenty of cover.</p>
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="video-container">
+        <video autoplay loop muted playsinline>
+          <source src="elephant.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="details">
+        <h2>Elephant</h2>
+        <p><strong>Type:</strong> Mammal</p>
+        <p><strong>Category:</strong> Herbivore</p>
+        <p><strong>Foods:</strong> Grass, Fruits, Bark</p>
+        <p>Elephants are the largest land animals on Earth. They use their trunk to drink water, grab things, and even greet each other. They live in herds and are very social.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
